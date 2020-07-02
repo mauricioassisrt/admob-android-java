@@ -1,0 +1,2 @@
+rootProject.name='projeto-admob'
+include ':app'
