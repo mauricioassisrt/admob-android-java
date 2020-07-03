@@ -20,14 +20,21 @@ public class MainActivity extends AppCompatActivity {
 
 
         //add admob
+        //implementacao na qual está no site https://developers.google.com/admob/android/quick-start
+        // Initialize Mobile Ads SDK
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
 
             }
         });
+        //Select an ad format Banner
+        //Load an ad
+        //atribui na variavel mAdview o id do elemento da activity
             mAdView = findViewById(R.id.adView);
+            //cria um Builder do tipo Adrequest
             AdRequest adRequest = new AdRequest.Builder().build();
+            //carrega o parametro dentro do metodo loadAd
             mAdView.loadAd(adRequest);
     }
 }
